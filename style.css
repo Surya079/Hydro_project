@@ -1,0 +1,622 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan+SC&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sedan+SC&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 100%;
+}
+.Logo {
+  width: 180px;
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, -100%);
+    transform: translate3d(0, 0,-100%);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  
+} */
+.nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+}
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    visibility: hidden;
+    background-color: rgb(0, 124, 182);
+    transition: 0.3s ease-in-out;
+ 
+  }
+}
+.current,.active{
+  color: #29c8f8;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+  visibility: visible;
+  
+}
+
+.nav-link:hover {
+  color: rgb(70, 179, 243);
+}
+.navbar {
+  background-color: #ffffff;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  padding-block: 0;
+}
+.nav-item {
+  margin-left: 10px;
+}
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.cummunitcate a {
+  text-decoration: none;
+  padding-bottom: 3px;
+  margin-left: 4px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+}
+.cummunitcate a:hover {
+  color: rgb(84, 170, 240);
+}
+.cummunitcate p {
+  margin-bottom: 0;
+}
+.cummunitcate p i {
+  margin-top: 3px;
+}
+@media (max-width: 450px) {
+  .cummunitcate a span {
+    display: none;
+  }
+  .cummunitcate a {
+    width: 50px;
+  }
+  .Slogan-content h1 {
+    font-size: 30px;
+  }
+}
+
+/* .Slogan::before{
+    background-color: rgba(0, 0, 0, 0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+} */
+
+.Slogan {
+  background: url(/asset/background2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.comapny-slogan {
+  padding: 0px;
+  background: transparent;
+  position: relative;
+  top: 10px;
+  text-align: center;
+  /* backface-visibility: hidden; */
+  padding-bottom: 10px;
+}
+
+.comapny-slogan h1 {
+  font-weight: 800;
+  font-family: "Sedan SC", serif;
+  color: rgb(0, 176, 207);
+  animation: fadeInLeft 2s ease-in-out 1;
+}
+.comapny-slogan p {
+  font-family: "Poppins", sans-serif;
+  color: rgb(207, 0, 0);
+  font-weight: 600;
+}
+.comapny-slogan h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  animation: fadeIn 1s ease-in both;
+  padding: 10px;
+  opacity: 0;
+ 
+}
+.comapny-slogan h1 {
+  color: #29c8f8;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /*Gives that scrolling effect as the typing happens
+  /* Adjust as needed */
+  animation: typing 5s steps(20, end) infinite, blink-caret 0.5s infinite;
+  width: auto;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 46%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.Slogan-content h1{
+    font-family: "Roboto";
+}
+.slide{
+  padding-inline: 10px;
+}
+.slider{
+  width: 100%;
+  height: 400px;
+  background-color: #3d3c3c;
+  
+}
+.slider img{
+  object-fit:fill;
+  
+}
+/* .welcome */
+/* --------   SLIDE ---------- */
+.slide-img{
+  width: 100%;
+  height: 380px;
+  background-color: black;
+}
+.slide-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 50%;
+}
+.slide-content{
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.slide-btn{
+  border: none;
+  padding: 10px;
+  margin-bottom: 50px;
+  background-color: red;
+  transition: background-color 1s;
+  font-weight: 500;
+  border-radius: 10px;
+}
+.slide-btn:hover{
+  background-color: white;
+  color: black;
+  
+
+}
+.home-content-1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+.home-content-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.home-info{
+  padding: 30px;
+  padding-top: 0;
+  
+}
+.home-info h1{
+  font-size: 3rem;
+  margin-left: 10px;
+  color: rgb(0, 0, 0);
+}
+.home-info p{
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-left: 10px;
+  letter-spacing: .5px;
+}
+.home-info-img{
+  padding: 30px;
+  padding-top: 0;
+
+
+}
+.home-info-img div img{
+  max-width: 100%;
+  max-height: 100%;
+  animation:fadeInRight  2s  ease 1 forwards;
+  border-radius: 20px;
+
+}
+.home-info-img div {
+  text-align: center;
+  background-position-y: center;
+  
+}
+.home-info-img-2 {
+  display: inline;
+  
+}
+.home-info-img-2 div {
+  text-align: center;
+}
+.home-info-img-2 div img{
+  border: 1px solid black;
+}
+
+@media (max-width: 380px) {
+  .comapny-slogan h1 {
+    font-size: 15px;
+  }
+  .comapny-slogan p {
+    font-size: 10px;
+  }
+  .home-info h1,.fecility_head{
+    font-size: 2rem;
+  
+  }
+  .home-info{
+    padding-bottom: 0px;
+  }
+  .home-info p, .footer-links span, .Cert_container p{
+    font-size: .7rem;
+    margin-top: 10px;
+  }
+  .home-info-img-2 div img{
+    margin-bottom: 20px;
+  }
+  .Cer___head{
+    margin-left: 10px;
+  }
+
+  .Cert_container{
+    margin-top: 0px;
+  }
+  .cert_img{
+    width: 100px;
+  }
+  .policy_title{
+    font-size: 15px;
+    font-weight:400;
+    text-align: center;
+  }
+  .policy_div{
+    width: 250px;
+    
+  }
+  .policy_content{
+    font-size: .7rem;
+    padding: 10px;
+    text-align: center;
+    
+    
+  }
+  .gallery-cell img{
+    width: 100px;
+  }
+ 
+  
+}
+
+  
+
+@media(max-width:425px){
+  .footer-info{
+    grid-template-columns: 1fr;
+  }
+  .policy_info{
+    grid-template-columns: 1fr;
+    
+  }
+  .policy_div{
+    margin-top: 15px;
+  }
+}
+.footer{
+  padding-top: 10px;
+  margin-top: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Montserrat", sans-serif
+
+}
+.footer-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.footer-content-1 div{
+  padding: 10px;
+}
+.footer-content-1 span{
+  display: block;
+  font-size: 15px;
+  
+}
+.footer-links{
+  height: fit-content;
+  padding: 10px;
+}
+.footer-links a{
+  color:rgb(0, 176, 207);
+  font-size: 23px;
+  padding-inline: 10px;
+
+}
+.footer-nav {
+    margin-top: 6px;
+}
+.footer-nav li a{
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif
+}
+.map{
+   padding: 10px;
+}
+.map iframe{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  transition:  all .5s ease;
+  opacity: 0;
+  
+}
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.about-title{
+  background-image: url("/asset/img\ \(1\).jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+
+   
+}
+
+.about-title h1 span{
+  font-weight: 100;
+}
+.about-heading{
+  padding-inline: 35px;
+  padding: 50px;
+}
+.About,.Us{
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000000;
+}
+.Us{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+.about-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about_info .li{
+  font-size: 2rem;
+}
+.Certificate{
+  background: url('https://miro.medium.com/v2/resize:fit:801/0*IhJcyt7ca4yQjSiu.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 300px;
+  color: #ffffff;
+  
+  
+}
+.Cer___head h1{
+  color: #000000;
+  font-weight: 600;
+  text-align: center;
+  
+}
+.Cert_container{
+  max-width: 600px;
+  margin-left: 20px;
+  /* margin-top: 60px; */
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-inline: auto;
+  
+}
+.gray{
+  background-color: #e4e4e4;
+}
+.Policy__conatiner{
+  padding: 15px;
+  background-color: #e4e4e4;
+}
+.policy__head{
+  text-align: center;
+  padding: 10px;
+}
+.policy_title{
+  padding: 10px;
+  font-weight: 600;
+  font-family:"Montserrat", sans-serif;
+}
+
+.policy_div{
+  max-width: 400px;
+  margin-inline: auto;
+  
+  padding: 10px;
+  border-radius: 5px;
+  transition: 2s all both;
+  color: #000000;
+  background-color: #e4e4e4;
+}
+.policy_div:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 20px black;
+}
+.policy_content{
+  text-align: justify;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 500px;
+  margin-right: 10px;
+  text-align: center;
+  counter-increment: gallery-cell;
+  
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.fecility_head{
+  font-family:"Montserrat", sans-serif ;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 10px;
+}
+.fecilities{
+  padding-bottom: 20px;
+}
+
+@media(max-width:624px){
+  .footer-info{
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width:925px) {
+  .home-content-1{
+    grid-template-columns: 1fr;
+  }
+  .home-content-2{
+    grid-template-columns: 1fr;
+  }
+  .footer{
+    grid-template-columns: 1fr;
+  }
+  .slide-content{
+    max-width: 100%;
+    font-size: small;
+  }
+  
+}
+
+@media(min-width:420px){
+  
+  .policy_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: 20px;
+
+  }
+  
+}
